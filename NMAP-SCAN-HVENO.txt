@@ -1,0 +1,1015 @@
+# Nmap 7.95 scan initiated Sat Mar  1 00:44:10 2025 as: nmap -sV --script vuln -oN scan_results.txt 192.168.68.0/24
+Nmap scan report for 192.168.68.1
+Host is up (0.0058s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+53/tcp  open  domain   Unbound
+80/tcp  open  http     OpenWrt uHTTPd
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+|_      http://ha.ckers.org/slowloris/
+443/tcp open  ssl/http OpenWrt uHTTPd
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_sslv2-drown: ERROR: Script execution failed (use -d to debug)
+MAC Address: 1C:61:B4:AC:C8:6D (TP-Link Limited)
+Service Info: OS: Linux; Device: WAP; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.68.50
+Host is up (0.021s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE    SERVICE VERSION
+6668/tcp open     irc?
+8654/tcp filtered unknown
+MAC Address: DC:4F:22:EF:14:06 (Espressif)
+
+Nmap scan report for 192.168.68.51
+Host is up (0.047s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+9999/tcp open  abyss?
+MAC Address: D8:44:89:90:5F:03 (TP-Link PTE.)
+
+Nmap scan report for 192.168.68.52
+Host is up (0.16s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT      STATE    SERVICE VERSION
+1935/tcp  filtered rtmp
+9999/tcp  open     abyss?
+27353/tcp filtered unknown
+48080/tcp filtered unknown
+MAC Address: 50:91:E3:8A:99:24 (TP-Link Limited)
+
+Nmap scan report for 192.168.68.53
+Host is up (0.011s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+9999/tcp open  abyss?
+MAC Address: 78:8C:B5:F0:77:A7 (TP-Link Limited)
+
+Nmap scan report for 192.168.68.55
+Host is up (0.0078s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE SERVICE         VERSION
+8008/tcp  open  http?
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+8009/tcp  open  ssl/ajp13?
+8443/tcp  open  ssl/https-alt?
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+9000/tcp  open  ssl/cslistener?
+10001/tcp open  ssl/scp-config?
+10002/tcp open  documentum?
+MAC Address: F4:F5:D8:B1:5A:04 (Google)
+
+Nmap scan report for 192.168.68.56
+Host is up (0.0094s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE SERVICE         VERSION
+8008/tcp  open  http?
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+8009/tcp  open  ssl/ajp13?
+8443/tcp  open  ssl/https-alt?
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+9000/tcp  open  ssl/cslistener?
+10001/tcp open  ssl/scp-config?
+10002/tcp open  documentum?
+MAC Address: E4:F0:42:55:64:39 (Google)
+
+Nmap scan report for 192.168.68.57
+Host is up (0.014s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE    SERVICE         VERSION
+5910/tcp  filtered cm
+8008/tcp  open     http?
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+8009/tcp  open     ssl/ajp13?
+8443/tcp  open     ssl/https-alt?
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+9000/tcp  open     ssl/cslistener?
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+10001/tcp open     ssl/scp-config?
+MAC Address: 38:86:F7:B3:25:84 (Google)
+
+Nmap scan report for 192.168.68.59
+Host is up (0.012s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE    VERSION
+5555/tcp open  adb        Android Debug Bridge (token auth required)
+8009/tcp open  tcpwrapped
+MAC Address: 08:A6:BC:32:B4:4D (Amazon Technologies)
+Service Info: OS: Android; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.68.61
+Host is up (0.014s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE SERVICE         VERSION
+8008/tcp  open  http?
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+8009/tcp  open  ssl/ajp13?
+8443/tcp  open  ssl/https-alt?
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+9000/tcp  open  ssl/cslistener?
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+10001/tcp open  ssl/scp-config?
+10002/tcp open  documentum?
+MAC Address: 48:D6:D5:CA:C8:30 (Google)
+
+Nmap scan report for 192.168.68.62
+Host is up (0.0098s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE SERVICE         VERSION
+8008/tcp  open  http?
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+8009/tcp  open  ssl/ajp13?
+8443/tcp  open  ssl/https-alt?
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+9000/tcp  open  ssl/cslistener?
+10001/tcp open  ssl/scp-config?
+MAC Address: 84:B8:B8:36:B2:F7 (Motorola (Wuhan) Mobility Technologies Communication)
+
+Nmap scan report for 192.168.68.63
+Host is up (0.015s latency).
+All 1000 scanned ports on 192.168.68.63 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: A8:BB:50:BA:F5:AA (WiZ IoT Company Limited)
+
+Nmap scan report for 192.168.68.65
+Host is up (0.026s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE VERSION
+9999/tcp open  abyss?
+MAC Address: 50:C7:BF:A6:42:B5 (TP-Link Technologies)
+
+Nmap scan report for 192.168.68.66
+Host is up (0.010s latency).
+All 1000 scanned ports on 192.168.68.66 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: 2C:AA:8E:07:84:4E (Wyze Labs)
+
+Nmap scan report for 192.168.68.67
+Host is up (0.015s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE    SERVICE     VERSION
+53/tcp   open     domain      dnsmasq 2.40
+| vulners: 
+|   cpe:/a:thekelleys:dnsmasq:2.40: 
+|     	2C119FFA-ECE0-5E14-A4A4-354A2C38071A	10.0	https://vulners.com/githubexploit/2C119FFA-ECE0-5E14-A4A4-354A2C38071A	*EXPLOIT*
+|     	EDB-ID:42943	9.8	https://vulners.com/exploitdb/EDB-ID:42943	*EXPLOIT*
+|     	EDB-ID:42942	9.8	https://vulners.com/exploitdb/EDB-ID:42942	*EXPLOIT*
+|     	EDB-ID:42941	9.8	https://vulners.com/exploitdb/EDB-ID:42941	*EXPLOIT*
+|     	CVE-2017-14493	9.8	https://vulners.com/cve/CVE-2017-14493
+|     	CVE-2017-14492	9.8	https://vulners.com/cve/CVE-2017-14492
+|     	CVE-2017-14491	9.8	https://vulners.com/cve/CVE-2017-14491
+|     	95499236-C9FE-56A6-9D7D-E943A24B633A	8.9	https://vulners.com/githubexploit/95499236-C9FE-56A6-9D7D-E943A24B633A	*EXPLOIT*
+|     	CVE-2020-25682	8.1	https://vulners.com/cve/CVE-2020-25682
+|     	CVE-2020-25681	8.1	https://vulners.com/cve/CVE-2020-25681
+|     	SSV:96623	7.8	https://vulners.com/seebug/SSV:96623	*EXPLOIT*
+|     	EXPLOITPACK:708148DF89AFEA44750A9B84E292A6B9	7.8	https://vulners.com/exploitpack/EXPLOITPACK:708148DF89AFEA44750A9B84E292A6B9	*EXPLOIT*
+|     	1337DAY-ID-28727	7.8	https://vulners.com/zdt/1337DAY-ID-28727	*EXPLOIT*
+|     	SSV:96620	7.5	https://vulners.com/seebug/SSV:96620	*EXPLOIT*
+|     	SSV:96619	7.5	https://vulners.com/seebug/SSV:96619	*EXPLOIT*
+|     	SSV:96618	7.5	https://vulners.com/seebug/SSV:96618	*EXPLOIT*
+|     	EXPLOITPACK:E661AED6AF5BCC1565D1CB0F9878E40B	7.5	https://vulners.com/exploitpack/EXPLOITPACK:E661AED6AF5BCC1565D1CB0F9878E40B	*EXPLOIT*
+|     	EXPLOITPACK:95340EB39AF331E01096F2B1CF7F1DE2	7.5	https://vulners.com/exploitpack/EXPLOITPACK:95340EB39AF331E01096F2B1CF7F1DE2	*EXPLOIT*
+|     	EXPLOITPACK:572F56450B83EECCA41D07EF1B33B48B	7.5	https://vulners.com/exploitpack/EXPLOITPACK:572F56450B83EECCA41D07EF1B33B48B	*EXPLOIT*
+|     	EDB-ID:42946	7.5	https://vulners.com/exploitdb/EDB-ID:42946	*EXPLOIT*
+|     	EDB-ID:42945	7.5	https://vulners.com/exploitdb/EDB-ID:42945	*EXPLOIT*
+|     	CVE-2023-50387	7.5	https://vulners.com/cve/CVE-2023-50387
+|     	CVE-2023-28450	7.5	https://vulners.com/cve/CVE-2023-28450
+|     	CVE-2022-0934	7.5	https://vulners.com/cve/CVE-2022-0934
+|     	CVE-2019-14513	7.5	https://vulners.com/cve/CVE-2019-14513
+|     	CVE-2017-15107	7.5	https://vulners.com/cve/CVE-2017-15107
+|     	CVE-2017-14496	7.5	https://vulners.com/cve/CVE-2017-14496
+|     	CVE-2017-14495	7.5	https://vulners.com/cve/CVE-2017-14495
+|     	CVE-2017-13704	7.5	https://vulners.com/cve/CVE-2017-13704
+|     	CVE-2015-8899	7.5	https://vulners.com/cve/CVE-2015-8899
+|     	CVE-2005-0877	7.5	https://vulners.com/cve/CVE-2005-0877
+|     	CE8366BE-F17D-552A-B1B4-C2DBD31482C0	7.5	https://vulners.com/githubexploit/CE8366BE-F17D-552A-B1B4-C2DBD31482C0	*EXPLOIT*
+|     	BB688FBF-CEE2-5DD1-8561-8F76501DE2D4	7.5	https://vulners.com/githubexploit/BB688FBF-CEE2-5DD1-8561-8F76501DE2D4	*EXPLOIT*
+|     	79068BEF-A572-5A8A-88D0-177524BDAAFE	7.5	https://vulners.com/githubexploit/79068BEF-A572-5A8A-88D0-177524BDAAFE	*EXPLOIT*
+|     	5EFDF373-FBD1-5C09-A612-00ADBFE574CF	7.5	https://vulners.com/githubexploit/5EFDF373-FBD1-5C09-A612-00ADBFE574CF	*EXPLOIT*
+|     	1337DAY-ID-28724	7.5	https://vulners.com/zdt/1337DAY-ID-28724	*EXPLOIT*
+|     	1337DAY-ID-28723	7.5	https://vulners.com/zdt/1337DAY-ID-28723	*EXPLOIT*
+|     	1337DAY-ID-28720	7.5	https://vulners.com/zdt/1337DAY-ID-28720	*EXPLOIT*
+|     	SSV:66871	6.8	https://vulners.com/seebug/SSV:66871	*EXPLOIT*
+|     	SSV:12710	6.8	https://vulners.com/seebug/SSV:12710	*EXPLOIT*
+|     	SSV:12174	6.8	https://vulners.com/seebug/SSV:12174	*EXPLOIT*
+|     	PACKETSTORM:80896	6.8	https://vulners.com/packetstorm/PACKETSTORM:80896	*EXPLOIT*
+|     	EXPLOITPACK:ECB83F9533371579F3997366C239FB4D	6.8	https://vulners.com/exploitpack/EXPLOITPACK:ECB83F9533371579F3997366C239FB4D	*EXPLOIT*
+|     	EDB-ID:9617	6.8	https://vulners.com/exploitdb/EDB-ID:9617	*EXPLOIT*
+|     	CVE-2009-2957	6.8	https://vulners.com/cve/CVE-2009-2957
+|     	CVE-2015-3294	6.4	https://vulners.com/cve/CVE-2015-3294
+|     	EDB-ID:42944	5.9	https://vulners.com/exploitdb/EDB-ID:42944	*EXPLOIT*
+|     	CVE-2020-25687	5.9	https://vulners.com/cve/CVE-2020-25687
+|     	CVE-2020-25683	5.9	https://vulners.com/cve/CVE-2020-25683
+|     	CVE-2017-14494	5.9	https://vulners.com/cve/CVE-2017-14494
+|     	SSV:96622	5.0	https://vulners.com/seebug/SSV:96622	*EXPLOIT*
+|     	EXPLOITPACK:C0456C7DF1625677A211CB9799B79F9A	5.0	https://vulners.com/exploitpack/EXPLOITPACK:C0456C7DF1625677A211CB9799B79F9A	*EXPLOIT*
+|     	CVE-2013-0198	5.0	https://vulners.com/cve/CVE-2013-0198
+|     	CVE-2012-3411	5.0	https://vulners.com/cve/CVE-2012-3411
+|     	1337DAY-ID-28726	5.0	https://vulners.com/zdt/1337DAY-ID-28726	*EXPLOIT*
+|     	SSV:96621	4.3	https://vulners.com/seebug/SSV:96621	*EXPLOIT*
+|     	SSV:12173	4.3	https://vulners.com/seebug/SSV:12173	*EXPLOIT*
+|     	EXPLOITPACK:22D470FAFA79A3DB978CC3F8766CC759	4.3	https://vulners.com/exploitpack/EXPLOITPACK:22D470FAFA79A3DB978CC3F8766CC759	*EXPLOIT*
+|     	CVE-2009-2958	4.3	https://vulners.com/cve/CVE-2009-2958
+|     	CBF3EF2D-3A5B-5110-A374-4A5ADE9AC91A	4.3	https://vulners.com/githubexploit/CBF3EF2D-3A5B-5110-A374-4A5ADE9AC91A	*EXPLOIT*
+|     	1337DAY-ID-28725	4.3	https://vulners.com/zdt/1337DAY-ID-28725	*EXPLOIT*
+|     	CVE-2021-3448	4.0	https://vulners.com/cve/CVE-2021-3448
+|     	CVE-2020-25686	3.7	https://vulners.com/cve/CVE-2020-25686
+|     	CVE-2020-25685	3.7	https://vulners.com/cve/CVE-2020-25685
+|     	CVE-2020-25684	3.7	https://vulners.com/cve/CVE-2020-25684
+|     	CVE-2019-14834	3.7	https://vulners.com/cve/CVE-2019-14834
+|     	PACKETSTORM:144480	0.0	https://vulners.com/packetstorm/PACKETSTORM:144480	*EXPLOIT*
+|     	PACKETSTORM:144479	0.0	https://vulners.com/packetstorm/PACKETSTORM:144479	*EXPLOIT*
+|     	PACKETSTORM:144473	0.0	https://vulners.com/packetstorm/PACKETSTORM:144473	*EXPLOIT*
+|     	PACKETSTORM:144471	0.0	https://vulners.com/packetstorm/PACKETSTORM:144471	*EXPLOIT*
+|     	PACKETSTORM:144468	0.0	https://vulners.com/packetstorm/PACKETSTORM:144468	*EXPLOIT*
+|     	PACKETSTORM:144462	0.0	https://vulners.com/packetstorm/PACKETSTORM:144462	*EXPLOIT*
+|_    	1337DAY-ID-6998	0.0	https://vulners.com/zdt/1337DAY-ID-6998	*EXPLOIT*
+80/tcp   filtered http
+554/tcp  open     rtsp
+| fingerprint-strings: 
+|   SIPOptions: 
+|     RTSP/1.0 200 OK
+|     CSeq: 42
+|_    Public: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, GET_PARAMETER
+9000/tcp open     cslistener?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port554-TCP:V=7.95%I=7%D=3/1%Time=67C2B3AA%P=i686-pc-windows-windows%r(
+SF:SIPOptions,5E,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x2042\r\nPublic:\x20OPTI
+SF:ONS,\x20DESCRIBE,\x20SETUP,\x20TEARDOWN,\x20PLAY,\x20GET_PARAMETER\r\n\
+SF:r\n");
+MAC Address: 04:17:B6:26:61:F5 (Smart Innovation)
+
+Nmap scan report for 192.168.68.68
+Host is up (0.010s latency).
+All 1000 scanned ports on 192.168.68.68 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: 2C:AA:8E:17:D6:3F (Wyze Labs)
+
+Nmap scan report for 192.168.68.69
+Host is up (0.0057s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE    SERVICE         VERSION
+1443/tcp open     ssl/upnp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+|   GenericLines: 
+|     HTTP/1.1 408 Request Timeout
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS3)
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 408</TITLE></HEAD><BODY><H1>Error 408</H1><P>Request Timeout</P></BODY></HTML>
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS3)
+|     Connection: close
+|_    <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+8082/tcp filtered blackice-alerts
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C2B362%P=i686-pc-windows-win
+SF:dows%r(GetRequest,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-typ
+SF:e:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:
+SF:\x20frame-ancestors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEA
+SF:D><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x
+SF:20Request</P></BODY></HTML>")%r(GenericLines,12B,"HTTP/1\.1\x20408\x20R
+SF:equest\x20Timeout\r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20
+SF:DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'\r\nServer
+SF::\x20Linux\x20UPnP/1\.0\x20Sonos/83\.1-62052\x20\(ZPS3\)\r\nConnection:
+SF:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20408</TITLE></HEAD><BODY><H
+SF:1>Error\x20408</H1><P>Request\x20Timeout</P></BODY></HTML>")%r(HTTPOpti
+SF:ons,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/htm
+SF:l\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20frame-ance
+SF:stors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error
+SF:\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P><
+SF:/BODY></HTML>")%r(RTSPRequest,123,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nContent-type:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Sec
+SF:urity-Policy:\x20frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP/
+SF:1\.0\x20Sonos/83\.1-62052\x20\(ZPS3\)\r\nConnection:\x20close\r\n\r\n<H
+SF:TML><HEAD><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1>
+SF:<P>Bad\x20Request</P></BODY></HTML>")%r(FourOhFourRequest,F3,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nContent-type:\x20text/html\r\nX-Frame-Opti
+SF:ons:\x20DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'\r
+SF:\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20400</TITLE></
+SF:HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P></BODY></HTML>")%r
+SF:(SIPOptions,123,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\x2
+SF:0text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20f
+SF:rame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP/1\.0\x20Sonos/83\.
+SF:1-62052\x20\(ZPS3\)\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>E
+SF:rror\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request<
+SF:/P></BODY></HTML>");
+MAC Address: B8:E9:37:D3:53:3E (Sonos)
+
+Nmap scan report for 192.168.68.70
+Host is up (0.014s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     MXChip IoT DevKit httpd
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+|_      http://ha.ckers.org/slowloris/
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+443/tcp open  ssl/http MXChip IoT DevKit httpd
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+MAC Address: 64:52:99:AB:03:0F (The Chamberlain Group)
+
+Nmap scan report for 192.168.68.73
+Host is up (0.025s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+6668/tcp open  irc?
+MAC Address: DC:4F:22:EF:49:99 (Espressif)
+
+Nmap scan report for 192.168.68.74
+Host is up (0.023s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+9999/tcp open  abyss?
+MAC Address: 90:9A:4A:1B:EE:4C (TP-Link Technologies)
+
+Nmap scan report for 192.168.68.75
+Host is up (0.013s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE    SERVICE VERSION
+9618/tcp filtered condor
+MAC Address: D8:28:C9:87:F0:B7 (General Electric Consumer and Industrial)
+
+Nmap scan report for 192.168.68.76
+Host is up (0.016s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE VERSION
+9999/tcp open  abyss?
+MAC Address: 50:C7:BF:A6:37:5C (TP-Link Technologies)
+
+Nmap scan report for 192.168.68.77
+Host is up (0.0087s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+1443/tcp open  ssl/upnp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+|   GenericLines: 
+|     HTTP/1.1 408 Request Timeout
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS12)
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 408</TITLE></HEAD><BODY><H1>Error 408</H1><P>Request Timeout</P></BODY></HTML>
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS12)
+|     Connection: close
+|_    <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C2B36C%P=i686-pc-windows-win
+SF:dows%r(GetRequest,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-typ
+SF:e:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:
+SF:\x20frame-ancestors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEA
+SF:D><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x
+SF:20Request</P></BODY></HTML>")%r(GenericLines,12C,"HTTP/1\.1\x20408\x20R
+SF:equest\x20Timeout\r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20
+SF:DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'\r\nServer
+SF::\x20Linux\x20UPnP/1\.0\x20Sonos/83\.1-62052\x20\(ZPS12\)\r\nConnection
+SF::\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20408</TITLE></HEAD><BODY><
+SF:H1>Error\x20408</H1><P>Request\x20Timeout</P></BODY></HTML>")%r(HTTPOpt
+SF:ions,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/ht
+SF:ml\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20frame-anc
+SF:estors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Erro
+SF:r\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P>
+SF:</BODY></HTML>")%r(RTSPRequest,124,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Se
+SF:curity-Policy:\x20frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP
+SF:/1\.0\x20Sonos/83\.1-62052\x20\(ZPS12\)\r\nConnection:\x20close\r\n\r\n
+SF:<HTML><HEAD><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H
+SF:1><P>Bad\x20Request</P></BODY></HTML>")%r(FourOhFourRequest,F3,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/html\r\nX-Frame-Op
+SF:tions:\x20DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'
+SF:\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20400</TITLE>
+SF:</HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P></BODY></HTML>")
+SF:%r(SIPOptions,124,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\
+SF:x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x2
+SF:0frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP/1\.0\x20Sonos/83
+SF:\.1-62052\x20\(ZPS12\)\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITL
+SF:E>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Reque
+SF:st</P></BODY></HTML>");
+MAC Address: 94:9F:3E:05:24:2E (Sonos)
+
+Nmap scan report for 192.168.68.79
+Host is up (0.0067s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+1443/tcp open  ssl/upnp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+|   GenericLines: 
+|     HTTP/1.1 408 Request Timeout
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS14)
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 408</TITLE></HEAD><BODY><H1>Error 408</H1><P>Request Timeout</P></BODY></HTML>
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS14)
+|     Connection: close
+|_    <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+7000/tcp open  rtsp     Sonos speaker rtspd
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C2B373%P=i686-pc-windows-win
+SF:dows%r(GetRequest,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-typ
+SF:e:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:
+SF:\x20frame-ancestors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEA
+SF:D><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x
+SF:20Request</P></BODY></HTML>")%r(GenericLines,12C,"HTTP/1\.1\x20408\x20R
+SF:equest\x20Timeout\r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20
+SF:DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'\r\nServer
+SF::\x20Linux\x20UPnP/1\.0\x20Sonos/83\.1-62052\x20\(ZPS14\)\r\nConnection
+SF::\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20408</TITLE></HEAD><BODY><
+SF:H1>Error\x20408</H1><P>Request\x20Timeout</P></BODY></HTML>")%r(HTTPOpt
+SF:ions,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/ht
+SF:ml\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20frame-anc
+SF:estors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Erro
+SF:r\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P>
+SF:</BODY></HTML>")%r(RTSPRequest,124,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Se
+SF:curity-Policy:\x20frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP
+SF:/1\.0\x20Sonos/83\.1-62052\x20\(ZPS14\)\r\nConnection:\x20close\r\n\r\n
+SF:<HTML><HEAD><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H
+SF:1><P>Bad\x20Request</P></BODY></HTML>")%r(FourOhFourRequest,F3,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/html\r\nX-Frame-Op
+SF:tions:\x20DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'
+SF:\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20400</TITLE>
+SF:</HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P></BODY></HTML>")
+SF:%r(SIPOptions,124,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\
+SF:x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x2
+SF:0frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP/1\.0\x20Sonos/83
+SF:\.1-62052\x20\(ZPS14\)\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITL
+SF:E>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Reque
+SF:st</P></BODY></HTML>");
+MAC Address: 48:A6:B8:40:31:80 (Sonos)
+Service Info: Device: media device
+
+Nmap scan report for 192.168.68.80
+Host is up (0.0089s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE    SERVICE    VERSION
+1049/tcp filtered td-postman
+1443/tcp open     ssl/upnp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+|   GenericLines: 
+|     HTTP/1.1 408 Request Timeout
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS12)
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 408</TITLE></HEAD><BODY><H1>Error 408</H1><P>Request Timeout</P></BODY></HTML>
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS12)
+|     Connection: close
+|_    <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C2B388%P=i686-pc-windows-win
+SF:dows%r(GetRequest,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-typ
+SF:e:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:
+SF:\x20frame-ancestors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEA
+SF:D><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x
+SF:20Request</P></BODY></HTML>")%r(GenericLines,12C,"HTTP/1\.1\x20408\x20R
+SF:equest\x20Timeout\r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20
+SF:DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'\r\nServer
+SF::\x20Linux\x20UPnP/1\.0\x20Sonos/83\.1-62052\x20\(ZPS12\)\r\nConnection
+SF::\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20408</TITLE></HEAD><BODY><
+SF:H1>Error\x20408</H1><P>Request\x20Timeout</P></BODY></HTML>")%r(HTTPOpt
+SF:ions,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/ht
+SF:ml\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20frame-anc
+SF:estors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Erro
+SF:r\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P>
+SF:</BODY></HTML>")%r(RTSPRequest,124,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Se
+SF:curity-Policy:\x20frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP
+SF:/1\.0\x20Sonos/83\.1-62052\x20\(ZPS12\)\r\nConnection:\x20close\r\n\r\n
+SF:<HTML><HEAD><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H
+SF:1><P>Bad\x20Request</P></BODY></HTML>")%r(FourOhFourRequest,F3,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/html\r\nX-Frame-Op
+SF:tions:\x20DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'
+SF:\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20400</TITLE>
+SF:</HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P></BODY></HTML>")
+SF:%r(SIPOptions,124,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\
+SF:x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x2
+SF:0frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP/1\.0\x20Sonos/83
+SF:\.1-62052\x20\(ZPS12\)\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITL
+SF:E>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Reque
+SF:st</P></BODY></HTML>");
+MAC Address: 94:9F:3E:05:36:2C (Sonos)
+
+Nmap scan report for 192.168.68.81
+Host is up (0.0046s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+1443/tcp open  ssl/upnp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+|   GenericLines: 
+|     HTTP/1.1 408 Request Timeout
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (BR200)
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 408</TITLE></HEAD><BODY><H1>Error 408</H1><P>Request Timeout</P></BODY></HTML>
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (BR200)
+|     Connection: close
+|_    <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C2B388%P=i686-pc-windows-win
+SF:dows%r(GetRequest,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-typ
+SF:e:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:
+SF:\x20frame-ancestors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEA
+SF:D><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x
+SF:20Request</P></BODY></HTML>")%r(GenericLines,12C,"HTTP/1\.1\x20408\x20R
+SF:equest\x20Timeout\r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20
+SF:DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'\r\nServer
+SF::\x20Linux\x20UPnP/1\.0\x20Sonos/83\.1-62052\x20\(BR200\)\r\nConnection
+SF::\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20408</TITLE></HEAD><BODY><
+SF:H1>Error\x20408</H1><P>Request\x20Timeout</P></BODY></HTML>")%r(HTTPOpt
+SF:ions,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/ht
+SF:ml\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20frame-anc
+SF:estors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Erro
+SF:r\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P>
+SF:</BODY></HTML>")%r(RTSPRequest,124,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Se
+SF:curity-Policy:\x20frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP
+SF:/1\.0\x20Sonos/83\.1-62052\x20\(BR200\)\r\nConnection:\x20close\r\n\r\n
+SF:<HTML><HEAD><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H
+SF:1><P>Bad\x20Request</P></BODY></HTML>")%r(FourOhFourRequest,F3,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/html\r\nX-Frame-Op
+SF:tions:\x20DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'
+SF:\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20400</TITLE>
+SF:</HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P></BODY></HTML>")
+SF:%r(SIPOptions,124,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\
+SF:x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x2
+SF:0frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP/1\.0\x20Sonos/83
+SF:\.1-62052\x20\(BR200\)\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITL
+SF:E>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Reque
+SF:st</P></BODY></HTML>");
+MAC Address: B8:E9:37:0F:D2:9A (Sonos)
+
+Nmap scan report for 192.168.68.82
+Host is up (0.016s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE SERVICE         VERSION
+8008/tcp  open  http?
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+8009/tcp  open  ssl/ajp13?
+8443/tcp  open  ssl/https-alt?
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+9000/tcp  open  ssl/cslistener?
+10001/tcp open  ssl/scp-config?
+MAC Address: 50:5B:C2:7F:84:F3 (Liteon Technology)
+
+Nmap scan report for 192.168.68.83
+Host is up (0.0052s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE SERVICE         VERSION
+8008/tcp  open  http?
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+8009/tcp  open  ssl/ajp13?
+8443/tcp  open  ssl/https-alt?
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+9000/tcp  open  ssl/cslistener?
+10001/tcp open  ssl/scp-config?
+MAC Address: 54:60:09:F4:CA:E6 (Google)
+
+Nmap scan report for 192.168.68.85
+Host is up (0.011s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE    SERVICE    VERSION
+1007/tcp filtered unknown
+8009/tcp open     tcpwrapped
+MAC Address: 00:71:47:6C:C4:6E (Amazon Technologies)
+
+Nmap scan report for 192.168.68.87
+Host is up (0.012s latency).
+All 1000 scanned ports on 192.168.68.87 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: 44:27:45:57:B8:85 (Unknown)
+
+Nmap scan report for 192.168.68.88
+Host is up (0.0051s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE SERVICE         VERSION
+8008/tcp  open  http?
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+8009/tcp  open  ssl/ajp13?
+8443/tcp  open  ssl/https-alt?
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+9000/tcp  open  ssl/cslistener?
+10001/tcp open  ssl/scp-config?
+MAC Address: 84:B8:B8:36:B4:0A (Motorola (Wuhan) Mobility Technologies Communication)
+
+Nmap scan report for 192.168.68.89
+Host is up (0.023s latency).
+All 1000 scanned ports on 192.168.68.89 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: A8:BB:50:BB:9A:46 (WiZ IoT Company Limited)
+
+Nmap scan report for 192.168.68.90
+Host is up (0.019s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+9999/tcp open  abyss?
+MAC Address: 1C:61:B4:BF:A5:ED (TP-Link Limited)
+
+Nmap scan report for 192.168.68.91
+Host is up (0.0095s latency).
+All 1000 scanned ports on 192.168.68.91 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: D4:AD:FC:E1:19:48 (Shenzhen Intellirocks Tech.)
+
+Nmap scan report for 192.168.68.93
+Host is up (0.0060s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+1443/tcp open  ssl/upnp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+|   GenericLines: 
+|     HTTP/1.1 408 Request Timeout
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS6)
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 408</TITLE></HEAD><BODY><H1>Error 408</H1><P>Request Timeout</P></BODY></HTML>
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS6)
+|     Connection: close
+|_    <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+7000/tcp open  rtsp     Sonos speaker rtspd
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C2B3AE%P=i686-pc-windows-win
+SF:dows%r(GetRequest,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-typ
+SF:e:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:
+SF:\x20frame-ancestors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEA
+SF:D><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x
+SF:20Request</P></BODY></HTML>")%r(GenericLines,12B,"HTTP/1\.1\x20408\x20R
+SF:equest\x20Timeout\r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20
+SF:DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'\r\nServer
+SF::\x20Linux\x20UPnP/1\.0\x20Sonos/83\.1-62052\x20\(ZPS6\)\r\nConnection:
+SF:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20408</TITLE></HEAD><BODY><H
+SF:1>Error\x20408</H1><P>Request\x20Timeout</P></BODY></HTML>")%r(HTTPOpti
+SF:ons,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/htm
+SF:l\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20frame-ance
+SF:stors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error
+SF:\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P><
+SF:/BODY></HTML>")%r(RTSPRequest,123,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nContent-type:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Sec
+SF:urity-Policy:\x20frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP/
+SF:1\.0\x20Sonos/83\.1-62052\x20\(ZPS6\)\r\nConnection:\x20close\r\n\r\n<H
+SF:TML><HEAD><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1>
+SF:<P>Bad\x20Request</P></BODY></HTML>")%r(FourOhFourRequest,F3,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nContent-type:\x20text/html\r\nX-Frame-Opti
+SF:ons:\x20DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'\r
+SF:\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20400</TITLE></
+SF:HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P></BODY></HTML>")%r
+SF:(SIPOptions,123,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\x2
+SF:0text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20f
+SF:rame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP/1\.0\x20Sonos/83\.
+SF:1-62052\x20\(ZPS6\)\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>E
+SF:rror\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request<
+SF:/P></BODY></HTML>");
+MAC Address: 5C:AA:FD:0D:D7:DC (Sonos)
+Service Info: Device: media device
+
+Nmap scan report for 192.168.68.95
+Host is up (0.020s latency).
+All 1000 scanned ports on 192.168.68.95 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: 44:61:32:FF:4E:CE (ecobee)
+
+Nmap scan report for 192.168.68.96
+Host is up (0.022s latency).
+All 1000 scanned ports on 192.168.68.96 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: BE:B5:4C:30:7B:59 (Unknown)
+
+Nmap scan report for 192.168.68.97
+Host is up (0.016s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+9999/tcp open  abyss?
+MAC Address: 60:A4:B7:F4:76:51 (TP-Link Limited)
+
+Nmap scan report for 192.168.68.98
+Host is up (0.0063s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE    VERSION
+9999/tcp open  tcpwrapped
+MAC Address: 50:C7:BF:3C:28:F4 (TP-Link Technologies)
+
+Nmap scan report for 192.168.68.99
+Host is up (0.0078s latency).
+All 1000 scanned ports on 192.168.68.99 are in ignored states.
+Not shown: 876 filtered tcp ports (no-response), 124 closed tcp ports (reset)
+MAC Address: E0:D8:C4:F9:37:6C (Qingdao Intelligent&Precise Electronics)
+
+Nmap scan report for 192.168.68.100
+Host is up (0.0085s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE SERVICE         VERSION
+8008/tcp  open  http?
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+8009/tcp  open  ssl/ajp13?
+8443/tcp  open  ssl/https-alt?
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+9000/tcp  open  ssl/cslistener?
+10001/tcp open  ssl/scp-config?
+10002/tcp open  documentum?
+MAC Address: D4:F5:47:3D:DD:09 (Google)
+
+Nmap scan report for 192.168.68.101
+Host is up (0.068s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT     STATE SERVICE    VERSION
+80/tcp   open  tcpwrapped
+|_http-server-header: EPSON HTTP Server
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+443/tcp  open  tcpwrapped
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-server-header: EPSON_Linux UPnP/1.0 Epson UPnP SDK/1.0
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+515/tcp  open  printer
+631/tcp  open  tcpwrapped
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-server-header: Epson_IPP-Server/2.0.0
+9100/tcp open  jetdirect?
+MAC Address: 68:55:D4:32:6D:6C (Seiko Epson)
+
+Nmap scan report for 192.168.68.103
+Host is up (0.0089s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+1443/tcp open  ssl/upnp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+|   GenericLines: 
+|     HTTP/1.1 408 Request Timeout
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS17)
+|     Connection: close
+|     <HTML><HEAD><TITLE>Error 408</TITLE></HEAD><BODY><H1>Error 408</H1><P>Request Timeout</P></BODY></HTML>
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-type: text/html
+|     X-Frame-Options: DENY
+|     Content-Security-Policy: frame-ancestors 'none'
+|     Server: Linux UPnP/1.0 Sonos/83.1-62052 (ZPS17)
+|     Connection: close
+|_    <HTML><HEAD><TITLE>Error 400</TITLE></HEAD><BODY><H1>Error 400</H1><P>Bad Request</P></BODY></HTML>
+7000/tcp open  rtsp
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 0
+|     Server: AirTunes/366.0
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Public: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, FLUSHBUFFERED, TEARDOWN, OPTIONS, POST, GET, PUT
+|     Server: AirTunes/366.0
+|   SIPOptions: 
+|     RTSP/1.0 200 OK
+|     Public: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, FLUSHBUFFERED, TEARDOWN, OPTIONS, POST, GET, PUT
+|     Server: AirTunes/366.0
+|_    CSeq: 42 OPTIONS
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C2B3C3%P=i686-pc-windows-win
+SF:dows%r(GetRequest,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-typ
+SF:e:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:
+SF:\x20frame-ancestors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEA
+SF:D><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x
+SF:20Request</P></BODY></HTML>")%r(GenericLines,12C,"HTTP/1\.1\x20408\x20R
+SF:equest\x20Timeout\r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20
+SF:DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'\r\nServer
+SF::\x20Linux\x20UPnP/1\.0\x20Sonos/83\.1-62052\x20\(ZPS17\)\r\nConnection
+SF::\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20408</TITLE></HEAD><BODY><
+SF:H1>Error\x20408</H1><P>Request\x20Timeout</P></BODY></HTML>")%r(HTTPOpt
+SF:ions,F3,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/ht
+SF:ml\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20frame-anc
+SF:estors\x20'none'\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Erro
+SF:r\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P>
+SF:</BODY></HTML>")%r(RTSPRequest,124,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nContent-type:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Se
+SF:curity-Policy:\x20frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP
+SF:/1\.0\x20Sonos/83\.1-62052\x20\(ZPS17\)\r\nConnection:\x20close\r\n\r\n
+SF:<HTML><HEAD><TITLE>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H
+SF:1><P>Bad\x20Request</P></BODY></HTML>")%r(FourOhFourRequest,F3,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nContent-type:\x20text/html\r\nX-Frame-Op
+SF:tions:\x20DENY\r\nContent-Security-Policy:\x20frame-ancestors\x20'none'
+SF:\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITLE>Error\x20400</TITLE>
+SF:</HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Request</P></BODY></HTML>")
+SF:%r(SIPOptions,124,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-type:\
+SF:x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x2
+SF:0frame-ancestors\x20'none'\r\nServer:\x20Linux\x20UPnP/1\.0\x20Sonos/83
+SF:\.1-62052\x20\(ZPS17\)\r\nConnection:\x20close\r\n\r\n<HTML><HEAD><TITL
+SF:E>Error\x20400</TITLE></HEAD><BODY><H1>Error\x20400</H1><P>Bad\x20Reque
+SF:st</P></BODY></HTML>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7000-TCP:V=7.95%I=7%D=3/1%Time=67C2B3D7%P=i686-pc-windows-windows%r
+SF:(GetRequest,45,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x20
+SF:0\r\nServer:\x20AirTunes/366\.0\r\n\r\n")%r(HTTPOptions,8C,"HTTP/1\.1\x
+SF:20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20F
+SF:LUSH,\x20FLUSHBUFFERED,\x20TEARDOWN,\x20OPTIONS,\x20POST,\x20GET,\x20PU
+SF:T\r\nServer:\x20AirTunes/366\.0\r\n\r\n")%r(SIPOptions,9E,"RTSP/1\.0\x2
+SF:0200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FL
+SF:USH,\x20FLUSHBUFFERED,\x20TEARDOWN,\x20OPTIONS,\x20POST,\x20GET,\x20PUT
+SF:\r\nServer:\x20AirTunes/366\.0\r\nCSeq:\x2042\x20OPTIONS\r\n\r\n");
+MAC Address: 54:2A:1B:7C:F8:16 (Sonos)
+
+Nmap scan report for 192.168.68.104
+Host is up (0.017s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  Unbound
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+MAC Address: 14:91:82:CB:BD:F9 (Belkin International)
+Service Info: Device: power-misc
+
+Nmap scan report for 192.168.68.106
+Host is up (0.0082s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+49152/tcp open  tcpwrapped
+62078/tcp open  tcpwrapped
+MAC Address: 2A:11:8E:89:5C:0D (Unknown)
+
+Nmap scan report for 192.168.68.78
+Host is up (0.0011s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT     STATE SERVICE         VERSION
+135/tcp  open  msrpc           Microsoft Windows RPC
+139/tcp  open  netbios-ssn     Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+902/tcp  open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+912/tcp  open  vmware-auth     VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+1074/tcp open  warmspotMgmt?
+| fingerprint-strings: 
+|   NULL: 
+|_    {"type":"Tier1","version":"1.0"}
+2869/tcp open  http            Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1074-TCP:V=7.95%I=7%D=3/1%Time=67C2B70C%P=i686-pc-windows-windows%r
+SF:(NULL,22,"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+|_smb-vuln-ms10-054: false
+|_samba-vuln-cve-2012-1182: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar  1 02:28:29 2025 -- 256 IP addresses (46 hosts up) scanned in 6259.53 seconds
